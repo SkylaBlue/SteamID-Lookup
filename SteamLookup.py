@@ -97,7 +97,8 @@ class cResolve:
                             Country = i[0:4].lstrip()
                             self.tList.append("IP: " + a + " || Country: " + Country)
                 pass
-
+            
+            # This is what makes mine unique. If we find IP addresses on a stats site, we will pull these as well
             if ''.join(IPs).find("Player IP Addresses"):
                for i in IPs:
                     if "<wbr>" in i:
