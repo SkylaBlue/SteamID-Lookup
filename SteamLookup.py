@@ -117,7 +117,8 @@ class cResolve:
 print "Python Steam Resolver->Version:1.6 - Made by Skyla Blue\n" # This thing has undergone many changes the past couple weeks       
 def main():
     steamid = raw_input("Enter SteamID: ")
-    if not steamid.strip().startswith("STEAM"): # This is actually case sensitive, so don't complain to me
+    steamid = steamid.strip()
+    if not steamid.startswith("STEAM"): # This is actually case sensitive, so don't complain to me
         print "You must enter a SteamID!"
     else:
         cResolve(steamid).parseResult()
