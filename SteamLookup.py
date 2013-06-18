@@ -1,3 +1,4 @@
+# -*- coding: cp1252 -*-
 import re, sys, urllib2
 
 """
