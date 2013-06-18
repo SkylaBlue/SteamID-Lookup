@@ -52,7 +52,7 @@ class cResolve:
         match=re.search(r'(\d+[-/]\d+[-/]\d{2})', dateString) # Check if there was a ban date
         if match:
             DateYear = match.group(1)[-2:]
-            Date = match.group(1)[:-2]+DateYear
+            Date = match.group(1)[:-2]+'20'+DateYear          # So you don't think we're formatting the date like Euros :D
             return Date
         else:
             Date = "Unknown"
