@@ -49,7 +49,7 @@ class cResolve:
         print "\nFound", listLen, "IP address(es)\n"
 
     def parseDate(self, dateString):
-        match=re.search(r'(\d+[-/]\d+[-/]\d{2})', dateString) # Check if there was a ban date that used slashes
+        match=re.search(r'(\d+[-/]\d+[-/]\d{2})', dateString) # Check if there was a ban date
         if match:
             DateYear = match.group(1)[-2:]
             Date = match.group(1)[:-2]+DateYear
@@ -71,7 +71,6 @@ class cResolve:
             for i in IPs:
                 if "no IP" in i or "<a href" in i: # Just skip no IP's and ones with a lot of random bs in it
                     pass
-
                 else:
                     foundIP = re.findall( r'[0-9]+(?:\.[0-9]+){3}', i)
                     foundDate = self.parseDate(i[4:-2])
@@ -86,7 +85,6 @@ class cResolve:
                         else:
                             self.tList.append("("+Country+") " + a + " || Banned on: " + foundDate)
                         
-
             if ''.join(IPs).find("Player IP Addresses"):
                for i in IPs:
                     if "<wbr>" in i:
