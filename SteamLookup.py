@@ -1,5 +1,21 @@
 import re, sys, urllib2
 
+"""
+Copyright© 2013 Skyla Blue
+All Rights Reserved
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+"""
 class cResolve:
     def __init__(self, steamID):
         self.steamID = steamID
@@ -86,7 +102,7 @@ class cResolve:
             self.printList(self.tList, self.steamID)
             
             
-print "Python Steam Resolver->Version:1.0 - Made by Skyla Blue\n"        
+print "Python SteamID Lookup->Version:1.1.7 - Made by Skyla Blue(5/31/2013)\n"        
 def main():
     steamid = raw_input("Enter SteamID: ")
     steamid = steamid.strip()
